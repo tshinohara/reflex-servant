@@ -22,4 +22,4 @@ instance RunClient GenericClientM where
   runRequest r = GenericClientM (runRequest r)
   streamingRequest r = GenericClientM (streamingRequest r)
   throwServantError e = GenericClientM (throwServantError e)
-  catchServantError (GenericClientM m) f = GenericClientM (catchServantError m (runGenericClientM . f))
+  -- catchServantError (GenericClientM m) f = GenericClientM (catchServantError m (runGenericClientM . f))
